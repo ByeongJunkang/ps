@@ -1,6 +1,3 @@
-
-
-
 def find_sqr(s):
     for i in range(N-s+1):
         for j in range(M-s+1):
