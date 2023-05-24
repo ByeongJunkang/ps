@@ -19,7 +19,7 @@ def combination(arr,N):
         
         for i in range(len(arr)):
             if not used[i] :
-               
+            
                 chosen.append(arr[i])
                 used[i] = 1
                 generate(chosen,used)
