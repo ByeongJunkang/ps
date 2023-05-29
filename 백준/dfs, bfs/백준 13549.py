@@ -14,6 +14,7 @@ def bfs():
         nx = [-1,1,2* cur_num]
         
         if cur_num == n:
+            print("hi")
             shortest_path = cur_len
             break
 
@@ -26,6 +27,8 @@ def bfs():
             if next_x >=0 and next_x < 100001:
                 if not visited[next_x]:
                     if i == 2:
+                        queue.append((next_x,cur_len))
+                    else:
                         queue.append((next_x,cur_len+1))
                     visited[next_x] = True
                     
