@@ -9,6 +9,7 @@ for _ in range(n-1):
     graph[a].append((b, usado))
     graph[b].append((a, usado))
 
+print(graph)
 
 def dfs(k,v):
     visited = [False] * (n+1)
