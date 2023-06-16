@@ -10,6 +10,6 @@ for i in range(len(miro)):
 
 for i in range(1,N+1):
     for j in range(1,M+1):
-        dp[i][j] = max(dp[i-1][j],dp[i][j-1]) + miro1[i][j]
+        dp[i][j] = max(dp[i-1][j],dp[i][j-1],dp[i-1][j-1]) + miro1[i][j]
 
 print(dp[N][M])
