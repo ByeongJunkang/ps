@@ -53,6 +53,8 @@ res = 0
 visited(2**N,0,0)
 
 
+
+
 import sys
 
 def dc(x,y,n):
