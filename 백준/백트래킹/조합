@@ -1,0 +1,14 @@
+arr = []
+def combi(idx):
+    
+    if len(arr) == 2:
+        print(*arr)
+        return
+    
+    for i in range(idx,8):
+        arr.append(i)
+        combi(i+1)
+        arr.pop()
+
+combi(1)
+

@@ -1,0 +1,14 @@
+
+arr = []
+def permutation():
+    if len(arr) == 3:
+        print(*arr)
+        return
+    
+    for i in range(1,4):
+        if i not in arr:
+            arr.append(i)
+            permutation()
+            arr.pop()
+
+permutation()
