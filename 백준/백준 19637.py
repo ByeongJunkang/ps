@@ -16,3 +16,4 @@ for _ in range(m):
         else:
             right = mid- 1
     print(standard[right+1][0])
+    left = right + 1
