@@ -1,7 +1,7 @@
 N = int(input())
 pattern =[['*'] * (N) for _ in range(N)]
 def erase(x,y,N):
-    
+
     if N < 3:
         return
     
@@ -15,9 +15,4 @@ def erase(x,y,N):
 
 erase(0,0,N)
 for i in pattern:
-    for j in i:
-        if j == '*':
-            print(j,end='')
-        else:
-            print(' ', end='')
-    print()
+    print(''.join(['*' if j == '*' else ' ' for j in i]))
