@@ -37,31 +37,29 @@
 # print(result)
 
 
-import math
 N = int(input())
-number = [i for i in range(10)]
 deungho = input().split()
 visited = [0] * 10
 result = []
-def dfs(num,last_num,temp):
+def dfs(count,last_num,temp):
 
-    if num == N:
+    if count == N:
         result.append(int(temp))
         return
   
-    if deungho[num] == '>':  
+    if deungho[count] == '>':  
         for i in range(10):
             if not visited[i]:
                 if last_num > i:
                     visited[i] = True
-                    dfs(num + 1, i, temp + str(i))
+                    dfs(count + 1, i, temp + str(i))
                     visited[i] = False
     else:
         for i in range(10):
             if not visited[i]:
                 if last_num < i:
                     visited[i] = True
-                    dfs(num + 1, i , temp + str(i))
+                    dfs(count + 1, i , temp + str(i))
                     visited[i] = False
 
 for i in range(0,10):
