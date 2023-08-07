@@ -15,6 +15,6 @@ def dfs(i):
 
 
 dfs(0)
-new_result = sorted(list(map(list,set(map(tuple,real_result)))))
-for list in new_result:
+real_result = sorted(list(map(list,set(map(tuple,real_result)))))
+for list in real_result:
     print(*list)
