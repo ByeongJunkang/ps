@@ -35,34 +35,21 @@
 # for i in range(1,len(str(N))+2):
 #     perm(i)
 # print(min_num)
-import sys
+
 N = int(input())
 M = int(input())
-if M ==0:
-    print(len(str(N)))
-    sys.exit()
-if N == 100:
-    print(0)
-    sys.exit()
-
-
-broken = list(map(int,input().split()))
-cur = 100
-num = [i for i in range(10)]
-
-for i in broken:
-    num.remove(i)
 min_num = abs(100-N)
+if M:
+    broken = list(map(int,input().split()))
+else:
+    broken = []
 for i in range(1000001):
-    
     test = str(i)
-    is_num = True
     for j in test:
-        if int(j) not in num:
-            is_num = False
+        is_true = True
+        if int(j)  in broken:
+            is_true = False
             break
-    
-    if is_num:
-        min_num = min(min_num,abs(i-N)+len(test),abs(N-i)+len(test))
-
+    if is_true:
+        min_num = min(min_num,abs(i-N)+len(test))
 print(min_num)
