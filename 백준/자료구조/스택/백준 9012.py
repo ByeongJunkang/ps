@@ -10,9 +10,9 @@ for _ in range(N):
                 stack.pop()
             else:
                 stack.append(letter)
-        
+
         else:
-            stack.append(letter)
+            break
     if len(stack) > 0:
         print("NO")
     else:
