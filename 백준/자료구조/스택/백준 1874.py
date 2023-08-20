@@ -1,25 +1,25 @@
 import sys
 input = sys.stdin.readline
 N = int(input())
-goal = []
-result = []
-final = []
+num = []
+stack = []
+answer = []
 for _ in range(N):
-    goal.append(int(input())) 
+    num.append(int(input())) 
 
 i = 1
 idx = 0
 while True:
-    result.append(i)
-    final.append("+")
-    while result:
+    stack.append(i)
+    answer.append("+")
+    while stack:
         if idx >= N:
             break
-        if result[-1] == goal[idx]:
-            final.append("-")
+        if stack[-1] == num[idx]:
+            answer.append("-")
             idx +=1
-            result.pop()
-        elif result[-1] > goal[idx]:
+            stack.pop()
+        elif stack[-1] > num[idx]:
             print("NO")
             sys.exit()
         else:
@@ -27,5 +27,5 @@ while True:
     i+=1
     if idx == N:
         break
-for i in final:
-    print(i)
+for ans in answer:
+    print(ans)
