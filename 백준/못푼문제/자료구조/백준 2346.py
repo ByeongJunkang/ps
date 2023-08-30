@@ -15,3 +15,8 @@ while s:
     answer.append(index.pop(start))
 for i in answer:
     print(i,end=' ')
+
+
+
+   
+
